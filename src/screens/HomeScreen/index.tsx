@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 
 import NavigationTop from '../../components/NavigationTop';
 import Title from '../../components/Title';
+import Searchbox from '../../components/Searchbox';
 import styles from './styles';
 
 const HomeScreen: FC = () => {
@@ -10,6 +11,7 @@ const HomeScreen: FC = () => {
     <View style={styles.wrapper}>
       <NavigationTop />
       <Title title={'Delicious\nfood for you'} />
+      <Searchbox />
     </View>
   );
 };

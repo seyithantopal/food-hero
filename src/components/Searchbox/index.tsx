@@ -21,7 +21,7 @@ const Searchbox: FC = () => {
         />
       </View>
       <View style={styles.searchIconWrapper}>
-        <Image source={searchIcon} />
+        <Image source={searchIcon} style={styles.searchIcon} />
       </View>
     </View>
   );
