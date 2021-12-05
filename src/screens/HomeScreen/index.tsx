@@ -1,17 +1,57 @@
-import React, { FC } from 'react';
-import { View, Text } from 'react-native';
+import React, { FC, useState, useEffect } from 'react';
+import { View } from 'react-native';
+import { categoryData } from '../../utils/constants/mockData';
+import { CategoryType, FoodType } from '../../utils/constants/interfaces';
+import { foodData } from '../../utils/constants/mockData';
+import { APPLICATION_MOTTO } from '../../utils/constants/common';
 
+// Components
 import NavigationTop from '../../components/NavigationTop';
 import Title from '../../components/Title';
 import Searchbox from '../../components/Searchbox';
+import Category from '../../components/Category';
+import FoodList from '../../components/FoodList';
 import styles from './styles';
 
 const HomeScreen: FC = () => {
+  const [categories, setCategories] = useState<CategoryType[]>(categoryData);
+  const [foods, setFoods] = useState<FoodType[]>(foodData);
+  const [filteredFoods, setFilteredFoods] = useState<FoodType[]>(foods);
+
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    categories[0].name,
+  );
+
+  useEffect(() => {
+    changeCategory(selectedCategory);
+    const aa = foods.filter(food => food.category === selectedCategory);
+    setFilteredFoods(aa);
+  }, [selectedCategory]);
+
+  const changeCategory = (categoryName: string) => {
+    const newCategories = categories.reduce(
+      (acc: CategoryType[], cur: CategoryType) => {
+        acc.push({
+          ...cur,
+          active: cur.name === categoryName ? true : false,
+        });
+        return acc;
+      },
+      [],
+    );
+    setCategories(newCategories);
+  };
+
+  const handleCategory = (categoryName: string) => {
+    setSelectedCategory(categoryName);
+  };
   return (
     <View style={styles.wrapper}>
       <NavigationTop />
-      <Title title={'Delicious\nfood for you'} />
+      <Title title={APPLICATION_MOTTO} />
       <Searchbox />
+      <Category category={categories} onPressCategory={handleCategory} />
+      <FoodList foodData={filteredFoods} />
     </View>
   );
 };
