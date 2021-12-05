@@ -8,6 +8,6 @@ export default StyleSheet.create({
     padding: 30,
     display: 'flex',
     flexDirection: 'column',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
   },
 });

@@ -7,6 +7,7 @@ import { APPLICATION_MOTTO } from '../../utils/constants/common';
 
 // Components
 import NavigationTop from '../../components/NavigationTop';
+import NavigationBottom from '../../components/NavigationBottom';
 import Title from '../../components/Title';
 import Searchbox from '../../components/Searchbox';
 import Category from '../../components/Category';
@@ -52,6 +53,7 @@ const HomeScreen: FC = () => {
       <Searchbox />
       <Category category={categories} onPressCategory={handleCategory} />
       <FoodList foodData={filteredFoods} />
+      <NavigationBottom />
     </View>
   );
 };

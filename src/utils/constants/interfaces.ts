@@ -16,3 +16,6 @@ export interface FoodType {
   price: string;
   category: string;
 }
+export interface IconType {
+  active?: boolean;
+}

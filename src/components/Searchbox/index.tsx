@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { View, TextInput, Image } from 'react-native';
+import { View, TextInput } from 'react-native';
 
-import searchIcon from '../../assets/images/search.png';
+import Search from './Icons/Search';
 import styles from './styles';
 
 const Searchbox: FC = () => {
@@ -16,12 +16,12 @@ const Searchbox: FC = () => {
         <TextInput
           style={styles.textInput}
           value={search}
-          placeholder="Search"
+          placeholder='Search'
           onChangeText={handleSearch}
         />
       </View>
       <View style={styles.searchIconWrapper}>
-        <Image source={searchIcon} style={styles.searchIcon} />
+        <Search />
       </View>
     </View>
   );

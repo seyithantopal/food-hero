@@ -1,4 +1,5 @@
 export const COLOR_PRIMARY = '#FA4A0C';
+export const COLOR_SECONDARY = '#ADADAF';
 export const COLOR_SEARCHBOX_TEXT = '#000';
 export const COLOR_SEARCHBOX_BACKGROUND = '#EFEEEE';
 export const COLOR_BACKGROUND = '#F2F2F2';
