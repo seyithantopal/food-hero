@@ -33,7 +33,6 @@ export default (
       flexDirection: 'column',
       justifyContent: 'space-between',
       alignItems: 'center',
-      height: '100%',
       marginTop: -55,
     },
     foodName: {

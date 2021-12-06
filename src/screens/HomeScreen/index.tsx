@@ -48,13 +48,15 @@ const HomeScreen: FC = () => {
   };
   return (
     <View style={styles.wrapper}>
-      <View style={styles.paddingWrapper}>
+      <View style={styles.spacingWrapper}>
         <NavigationTop />
-        <Title title={APPLICATION_MOTTO} style={styles.title} />
+        <Title title={APPLICATION_MOTTO} />
         <Searchbox />
       </View>
-      <Category category={categories} onPressCategory={handleCategory} />
-      <FoodList foodData={filteredFoods} />
+      <View>
+        <Category category={categories} onPressCategory={handleCategory} />
+        <FoodList foodData={filteredFoods} />
+      </View>
       <NavigationBottom />
     </View>
   );

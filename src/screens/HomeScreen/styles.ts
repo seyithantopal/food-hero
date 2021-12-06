@@ -7,14 +7,11 @@ export default StyleSheet.create({
     backgroundColor: COLOR_BACKGROUND,
     display: 'flex',
     flexDirection: 'column',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
   },
-  paddingWrapper: {
+  spacingWrapper: {
     paddingLeft: 30,
     paddingRight: 30,
     paddingTop: 30,
-  },
-  title: {
-    marginTop: 5,
   },
 });
