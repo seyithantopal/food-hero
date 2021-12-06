@@ -2,8 +2,9 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   wrapper: {
-    // backgroundColor: 'red',
     marginTop: 15,
+    paddingLeft: 30,
+    paddingRight: 30,
   },
   menu: {
     display: 'flex',

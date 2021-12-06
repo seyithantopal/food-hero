@@ -3,6 +3,7 @@ import {
   COLOR_PRIMARY,
   COLOR_FOOD_NAME,
   COLOR_FOOD_BACKGROUND,
+  COLOR_FOOD_SHADOW,
 } from '../../utils/constants/color';
 
 export default (
@@ -19,6 +20,13 @@ export default (
       margin: SPACING,
       marginTop: 50,
       borderRadius: 30,
+      shadowColor: COLOR_FOOD_SHADOW,
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowRadius: 0,
     },
     onBox: {
       display: 'flex',

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 import styles from './styles';
 
-const Title: FC<{ title: string }> = ({ title }) => {
+const Title: FC<{ title: string; style?: any }> = ({ title, style }) => {
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, style]}>
       <Text style={styles.title}>{title}</Text>
     </View>
   );

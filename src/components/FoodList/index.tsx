@@ -1,5 +1,5 @@
-import React, { FC, useRef } from 'react';
-import { View, Animated } from 'react-native';
+import React, { FC, useRef, useEffect } from 'react';
+import { Animated, Easing } from 'react-native';
 import { FoodType } from '../../utils/constants/interfaces';
 import { FULL_SIZE } from '../../utils/constants/common';
 import Food from '../Food';
@@ -8,8 +8,20 @@ import styles from './styles';
 
 const FoodList: FC<{ foodData: FoodType[] }> = ({ foodData }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const fadeValue = new Animated.Value(0);
+
+  useEffect(() => {
+    Animated.timing(fadeValue, {
+      toValue: 5,
+      duration: 500,
+      useNativeDriver: true,
+      easing: Easing.cubic,
+    }).start();
+  }, [fadeValue]);
+
   return (
-    <View style={styles.wrapper}>
+    <Animated.View style={[styles.wrapper, { opacity: fadeValue }]}>
       <Animated.FlatList
         data={foodData}
         horizontal
@@ -24,7 +36,7 @@ const FoodList: FC<{ foodData: FoodType[] }> = ({ foodData }) => {
           <Food item={item} index={index} scrollX={scrollX} />
         )}
       />
-    </View>
+    </Animated.View>
   );
 };
 

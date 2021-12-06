@@ -7,3 +7,4 @@ export const COLOR_TITLE = '#000';
 export const COLOR_CATEGORY_NAME = '#9A9A9D';
 export const COLOR_FOOD_NAME = '#000';
 export const COLOR_FOOD_BACKGROUND = '#fff';
+export const COLOR_FOOD_SHADOW = '#000393939';

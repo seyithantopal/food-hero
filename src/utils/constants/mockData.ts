@@ -21,6 +21,11 @@ export const categoryData: CategoryType[] = [
     name: 'Sauce',
     active: false,
   },
+  {
+    id: 5,
+    name: 'Pizza',
+    active: false,
+  },
 ];
 
 export const foodData: FoodType[] = [
@@ -58,5 +63,12 @@ export const foodData: FoodType[] = [
     name: 'Food 5',
     price: 'N1,900',
     category: 'Snacks',
+  },
+  {
+    id: 6,
+    image: 'image',
+    name: 'Food 6',
+    price: 'N1,900',
+    category: 'Drinks',
   },
 ];

@@ -8,8 +8,9 @@ export default StyleSheet.create({
   wrapper: {
     display: 'flex',
     flexDirection: 'row',
-    padding: 10,
-    // backgroundColor: '#5D5DA0',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 40,
   },
   categoryName: {
     marginRight: 10,

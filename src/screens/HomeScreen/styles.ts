@@ -5,9 +5,16 @@ export default StyleSheet.create({
   wrapper: {
     flex: 1,
     backgroundColor: COLOR_BACKGROUND,
-    padding: 30,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
+  },
+  paddingWrapper: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop: 30,
+  },
+  title: {
+    marginTop: 5,
   },
 });
